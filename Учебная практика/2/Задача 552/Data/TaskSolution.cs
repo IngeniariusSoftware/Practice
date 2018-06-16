@@ -11,7 +11,13 @@ namespace Data
         static void Main()
         {
             int countAnimalsTypes = int.Parse(Console.ReadLine());
-            char[] countAnimals = Console.ReadLine().ToCharArray();
+            string[] numbers = Console.ReadLine().Split(' ');
+            int[] countAnimals = new int[numbers.Length];
+            for (int index = 0; index < numbers.Length; index++)
+            {
+                countAnimals[index] = int.Parse(numbers[index]);
+            }
+
             int[] combinations = new int [3];
             if (countAnimalsTypes > 2)
             {
@@ -24,7 +30,7 @@ namespace Data
             }
 
             Console.WriteLine(combinations[2]);
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }
