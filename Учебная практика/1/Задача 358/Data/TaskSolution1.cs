@@ -2,7 +2,7 @@
 
 namespace Data
 {
-    class Program
+    class TaskSolution1
     {
         static int NOD(Int32 number1, Int32 number2)
         {

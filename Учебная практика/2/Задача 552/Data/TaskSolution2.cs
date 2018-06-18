@@ -2,7 +2,7 @@
 
 namespace Data
 {
-    class TaskSolution
+    class TaskSolution2
     {
         static void Main()
         {
