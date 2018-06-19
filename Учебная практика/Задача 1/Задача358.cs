@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Задача_358
+namespace Задача_1
 {
-    class TaskSolution1
+    class Задача358
     {
-        static int NOD(Int32 number1, Int32 number2)
+        static int Nod(Int32 number1, Int32 number2)
         {
             if (number1 == number2)
             {
@@ -19,7 +19,7 @@ namespace Задача_358
                     number2 = shelf;
                 }
 
-                return NOD(number1, number2 - number1);
+                return Nod(number1, number2 - number1);
             }
         }
 
@@ -71,7 +71,7 @@ namespace Задача_358
                     }
                     else
                     {
-                        coefficients[index] = NOD(deltaX[index], deltaY[index]);
+                        coefficients[index] = Nod(deltaX[index], deltaY[index]);
                     }
                 }
             }

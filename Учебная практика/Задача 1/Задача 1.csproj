@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2DF8F55-6EAD-4576-84F4-2C65E8570F2D}</ProjectGuid>
+    <ProjectGuid>{C7329284-5C8B-4FC9-8C10-543EFAF3B0FA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Задача_587</RootNamespace>
-    <AssemblyName>Задача 587</AssemblyName>
+    <RootNamespace>Задача_1</RootNamespace>
+    <AssemblyName>Задача 1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Задача358.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

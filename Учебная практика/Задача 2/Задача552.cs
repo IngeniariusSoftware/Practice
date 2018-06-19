@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Задача_552
+namespace Задача_2
 {
-    class TaskSolution2
+    class Задача552
     {
         static void Main()
         {
@@ -14,7 +14,7 @@ namespace Задача_552
                 countAnimals[index] = int.Parse(numbers[index]);
             }
 
-            Int64[] combinations = new Int64 [3];
+            Int64[] combinations = new Int64[3];
             if (countAnimalsTypes > 2)
             {
                 for (int index = 0; index < countAnimalsTypes; index++)

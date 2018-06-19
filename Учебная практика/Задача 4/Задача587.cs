@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Задача_587
+namespace Задача_4
 {
-    class Program
+    
+    class Задача587
     {
         static void Main(string[] args)
         {
+              
         }
     }
 }

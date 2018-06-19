@@ -1,9 +1,9 @@
 ﻿using System;
 using Library_Functions;
 
-namespace Задача_59г
+namespace Задача_3
 {
-    class TaskSolution3
+    class Задача59г
     {
         static void Main(string[] args)
         {
@@ -14,10 +14,10 @@ namespace Задача_59г
             Console.WriteLine("\n\tВвод координаты y");
             Functions.ReadDouble(out double y);
             if (x >= -1 &&
-                x <= 1 && 
-                y >= -1 && 
-                y <= 1 && 
-                x + y >= -1 && 
+                x <= 1 &&
+                y >= -1 &&
+                y <= 1 &&
+                x + y >= -1 &&
                 x + y <= 1)
             {
                 Console.WriteLine("\n\tТочка ({0} , {1}) принадлежит заданной области", x, y);
