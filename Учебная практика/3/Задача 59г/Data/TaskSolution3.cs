@@ -1,7 +1,7 @@
 ﻿using System;
 using Library_Functions;
 
-namespace Data
+namespace Задача_59г
 {
     class TaskSolution3
     {

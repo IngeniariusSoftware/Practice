@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Data
+namespace Задача_358
 {
     class TaskSolution1
     {
