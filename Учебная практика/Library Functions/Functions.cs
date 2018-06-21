@@ -6,10 +6,9 @@ namespace Library_Functions
     {
         public static Random Rnd = new Random();
 
-        public static int VvodWhole()
+        public static void ReadWhole(out int numberWhole)
         {
             bool rightWhole;
-            int numberWhole;
             do
             {
                 Console.WriteLine("\n   Пожалуйста, введите целое число");
@@ -19,8 +18,8 @@ namespace Library_Functions
                     Console.WriteLine("\n\t\aК сожалению, вы ввели что-то не так. Ожидалось целое число");
                     Console.WriteLine("\n\tЭто любое число без дробной части");
                 }
-            } while (!rightWhole);
-            return numberWhole;
+            }
+            while (!rightWhole);
         }
 
         public static void ReadNatural(out int numberNatural)
@@ -70,7 +69,8 @@ namespace Library_Functions
                 if (!rightDouble)
                 {
                     Console.WriteLine("\n\t\aК сожалению, вы ввели что-то не так. Ожидалось действительное число");
-                    Console.WriteLine("\n\tЭто любое число без посторонних символов, кроме символа ',' для ввода дробных чисел и '-' для ввода отрицательных чисел");
+                    Console.WriteLine(
+                        "\n\tЭто любое число без посторонних символов, кроме символа ',' для ввода дробных чисел и '-' для ввода отрицательных чисел");
                 }
             }
             while (!rightDouble);
