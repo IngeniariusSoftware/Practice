@@ -6,6 +6,23 @@ namespace Library_Functions
     {
         public static Random Rnd = new Random();
 
+        public static int VvodWhole()
+        {
+            bool rightWhole;
+            int numberWhole;
+            do
+            {
+                Console.WriteLine("\n   Пожалуйста, введите целое число");
+                rightWhole = int.TryParse(Console.ReadLine(), out numberWhole);
+                if (!rightWhole)
+                {
+                    Console.WriteLine("\n\t\aК сожалению, вы ввели что-то не так. Ожидалось целое число");
+                    Console.WriteLine("\n\tЭто любое число без дробной части");
+                }
+            } while (!rightWhole);
+            return numberWhole;
+        }
+
         public static void ReadNatural(out int numberNatural)
         {
             bool rightNatural;
@@ -22,14 +39,14 @@ namespace Library_Functions
             while (!rightNatural);
         }
 
-        public static void ReadNonNegative(out int numberZahlen)
+        public static void ReadNonNegative(out int numberNonNegative)
         {
             bool rightNonNegative;
             do
             {
                 Console.WriteLine("\n\tПожалуйста, введите неотрицательное число");
-                rightNonNegative = int.TryParse(Console.ReadLine(), out numberZahlen);
-                if (numberZahlen < 0)
+                rightNonNegative = int.TryParse(Console.ReadLine(), out numberNonNegative);
+                if (numberNonNegative < 0)
                 {
                     rightNonNegative = false;
                 }
@@ -77,7 +94,7 @@ namespace Library_Functions
                     firstPositionOfAnswer,
                     lastPositionOfAnswer);
                 rightAnswer = int.TryParse(Console.ReadLine(), out numberOfAnswer)
-                              & numberOfAnswer <= lastPositionOfAnswer & numberOfAnswer >= firstPositionOfAnswer;
+                              && numberOfAnswer <= lastPositionOfAnswer && numberOfAnswer >= firstPositionOfAnswer;
                 if (!rightAnswer)
                 {
                     Console.WriteLine(

@@ -11,7 +11,11 @@ namespace Задача_6
     {
         static void Main(string[] args)
         {
-
+            for (int index = 0; index < 3; index++)
+            {
+                Console.WriteLine("Ввод a{0}", index + 1);
+                Functions.
+            }
         }
     }
 }
