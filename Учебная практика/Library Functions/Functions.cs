@@ -63,6 +63,13 @@ namespace Library_Functions
         {
             bool rightAnswer;
             int numberOfAnswer;
+            if (firstPositionOfAnswer > lastPositionOfAnswer)
+            {
+                int shelf = firstPositionOfAnswer;
+                firstPositionOfAnswer = lastPositionOfAnswer;
+                lastPositionOfAnswer = shelf;
+            }
+
             do
             {
                 Console.WriteLine(

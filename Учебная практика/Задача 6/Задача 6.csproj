@@ -7,7 +7,7 @@
     <ProjectGuid>{3E03A960-CCC9-4463-87D7-2AD693B56B87}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Задача_6</RootNamespace>
-    <AssemblyName>Задача_6</AssemblyName>
+    <AssemblyName>Задача 6</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Задача13.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library Functions\Library Functions.csproj">
+      <Project>{111270ca-bb3d-443f-bdf0-2842d0ae15aa}</Project>
+      <Name>Library Functions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
