@@ -6,20 +6,20 @@ namespace Library_Functions
     {
         public static Random Rnd = new Random();
 
-        public static void ReadWhole(out int numberWhole)
+        public static void ReadInteger(out int numberInteger)
         {
-            bool rightWhole;
+            bool rightInteger;
             do
             {
-                Console.WriteLine("\n   Пожалуйста, введите целое число");
-                rightWhole = int.TryParse(Console.ReadLine(), out numberWhole);
-                if (!rightWhole)
+                Console.WriteLine("\n\tПожалуйста, введите целое число");
+                rightInteger = int.TryParse(Console.ReadLine(), out numberInteger);
+                if (!rightInteger)
                 {
                     Console.WriteLine("\n\t\aК сожалению, вы ввели что-то не так. Ожидалось целое число");
                     Console.WriteLine("\n\tЭто любое число без дробной части");
                 }
             }
-            while (!rightWhole);
+            while (!rightInteger);
         }
 
         public static void ReadNatural(out int numberNatural)

@@ -63,7 +63,7 @@ namespace Задача_5
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("{0,5} ", mas[indexY, indexX]);
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.Gray;
                     }
 
                 }
