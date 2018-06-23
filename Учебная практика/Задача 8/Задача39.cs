@@ -21,13 +21,14 @@ namespace Задача_8
             {
                 if (Graph[path.Last()].Contains(path[0]))
                 {
-                    Console.WriteLine("\n\tНайден следующий простой цикл длины {0}", LengthPath);
+                    Console.WriteLine("\n\tНайден следующий простой цикл длины {0}:\n", LengthPath);
+                    Console.Write("\t");
                     foreach (int vertex in path)
                     {
                         Console.Write("{0} -> ", vertex + 1);
                     }
 
-                    Console.Write(path[0] + 1);
+                    Console.Write("{0}\n", path[0] + 1);
                     FindCycle = true;
                 }
             }
@@ -56,15 +57,14 @@ namespace Задача_8
             Functions.ReadNatural(out int lengthGraph);
             Console.WriteLine("\n\tВвод длины простого цикла");
             Functions.ReadNatural(out LengthPath);
-            Console.WriteLine(
-                "\n\tВводите ребра графа как 'вершина1 вершина2'.\n"
-                + "\n\tЧтобы закончить ввод, введите пустую строку\n" + "\n\tВершины начинают нумероваться с 1");
+            Console.WriteLine("\n\tВершины начинают нумероваться с 1");
             Regex reg = new Regex(@"[0-9]+");
             Graph = new List<int>[lengthGraph];
             for (int index = 0; index < lengthGraph; index++)
             {
                 Graph[index] = new List<int>();
             }
+
             Console.WriteLine("\n\tКаким образом заполнить массив?");
             Console.WriteLine("\n\t1 - случайно");
             Console.WriteLine("\n\t2 - вручную");
@@ -85,6 +85,10 @@ namespace Задача_8
             }
             else
             {
+
+                Console.WriteLine(
+                    "\n\tВводите ребра графа как 'вершина1 вершина2'.\n"
+                    + "\n\tЧтобы закончить ввод, введите пустую строку\n");
                 string input = null;
                 while (input != "")
                 {
@@ -183,7 +187,9 @@ namespace Задача_8
 
             if (!FindCycle)
             {
-                Console.WriteLine("\n\tК сожалению, в графе не было найдено ни одного простого цикла указанной длины");
+                Console.WriteLine(
+                    "\n\tК сожалению, в графе не было найдено ни одного простого цикла длины {0}",
+                    LengthPath);
             }
 
             Console.WriteLine("\n\tДля завершения работы нажмите на любую клавишу . . .");
