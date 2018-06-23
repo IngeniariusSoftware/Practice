@@ -23,7 +23,7 @@ namespace Задача_1
             }
         }
 
-        static void Main(string[] args)
+        static void Main()
 
         {
             string[] tokens = Console.ReadLine().Split(' ');

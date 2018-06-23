@@ -5,7 +5,7 @@ namespace Задача_3
 {
     class Задача59г
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("\n\tДанная программа определяет принадлежит ли ваша точка заданной области");
             Console.WriteLine("\n\tЕсли точка принадлежит области или лежит вне её, программа выдаст соотвествующее сообщение об этом");

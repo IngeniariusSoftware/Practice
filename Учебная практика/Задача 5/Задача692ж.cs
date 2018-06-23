@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Library_Functions;
 
 namespace Задача_5
@@ -11,7 +7,7 @@ namespace Задача_5
     class Задача692ж
     {
 
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("\n\tДанная программа ищет максимальный элемент в заданной области данной матрицы");
             Console.WriteLine("\n\tВвод размера матрицы");

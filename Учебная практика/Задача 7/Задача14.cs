@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Задача_7
 {
-    class Program
+    class Задача14
     {
-        static void Main(string[] args)
+        static void Main()
         {
+
         }
     }
 }

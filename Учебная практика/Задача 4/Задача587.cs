@@ -6,7 +6,7 @@ namespace Задача_4
     
     class Задача587
     {
-        static void Main(string[] args)
+        static void Main()
         {
         }
     }

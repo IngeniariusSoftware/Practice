@@ -9,7 +9,7 @@ namespace Задача_6
 {
     class Задача13
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine(
                 "\n\tДанная программа решает следующую задачу: ввести а1, а2, а3, М, N.\n"
