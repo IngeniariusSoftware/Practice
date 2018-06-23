@@ -65,54 +65,76 @@ namespace Задача_8
             {
                 Graph[index] = new List<int>();
             }
-
-            string input = null;
-            while (input != "")
+            Console.WriteLine("\n\tКаким образом заполнить массив?");
+            Console.WriteLine("\n\t1 - случайно");
+            Console.WriteLine("\n\t2 - вручную");
+            int answer = Functions.ReadAnswer(1, 2);
+            if (answer == 1)
             {
-                Console.WriteLine("\n\tПожалуйста, введите ребро графа как 'вершина1 вершина2'");
-                input = Console.ReadLine();
-                var vertices = reg.Matches(input);
-                if (vertices.Count >= 2)
+                for (int indexY = 0; indexY < lengthGraph; indexY++)
                 {
-                    int firstVertex = int.Parse(vertices[0].ToString()) - 1;
-                    int secondVertex = int.Parse(vertices[1].ToString()) - 1;
-                    if (firstVertex <= lengthGraph && firstVertex > -1)
+                    for (int indexX = 0; indexX < lengthGraph; indexX++)
                     {
-                        if (secondVertex <= lengthGraph && secondVertex > -1)
+                        int rndVertex = Functions.Rnd.Next(0, lengthGraph);
+                        if (!Graph[indexY].Contains(rndVertex))
                         {
-                            if (Graph[firstVertex].Contains(secondVertex))
+                            Graph[indexY].Add(rndVertex);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                string input = null;
+                while (input != "")
+                {
+                    Console.WriteLine("\n\tПожалуйста, введите ребро графа как 'вершина1 вершина2'");
+                    input = Console.ReadLine();
+                    var vertices = reg.Matches(input);
+                    if (vertices.Count >= 2)
+                    {
+                        int firstVertex = int.Parse(vertices[0].ToString()) - 1;
+                        int secondVertex = int.Parse(vertices[1].ToString()) - 1;
+                        if (firstVertex <= lengthGraph && firstVertex > -1)
+                        {
+                            if (secondVertex <= lengthGraph && secondVertex > -1)
                             {
-                                Console.WriteLine("\n\tТакое ребро уже существует");
+                                if (Graph[firstVertex].Contains(secondVertex))
+                                {
+                                    Console.WriteLine("\n\tТакое ребро уже существует");
+                                }
+                                else
+                                {
+                                    Graph[firstVertex].Add(secondVertex);
+                                    Console.WriteLine(
+                                        "\n\tРебро '{0}' - '{1}' успешно добавлено",
+                                        firstVertex + 1,
+                                        secondVertex + 1);
+                                }
                             }
                             else
                             {
-                                Graph[firstVertex].Add(secondVertex);
                                 Console.WriteLine(
-                                    "\n\tРебро '{0}' - '{1}' успешно добавлено",
-                                    firstVertex + 1,
+                                    "\n\tК сожалению, вершины '{0}' не существует в графе",
                                     secondVertex + 1);
                             }
                         }
                         else
                         {
-                            Console.WriteLine("\n\tК сожалению, вершины '{0}' не существует в графе", secondVertex + 1);
+                            Console.WriteLine("\n\tК сожалению, вершины '{0}' не существует в графе", firstVertex + 1);
                         }
                     }
                     else
                     {
-                        Console.WriteLine("\n\tК сожалению, вершины '{0}' не существует в графе", firstVertex + 1);
-                    }
-                }
-                else
-                {
-                    if (input == "")
-                    {
-                        Console.WriteLine("Ввод закончен");
-                    }
-                    else
-                    {
-                        Console.WriteLine(
-                            "\n\tК сожалению, вы ввели что-то не так. Ожидалось два натуральных числа, разделенные пробелом");
+                        if (input == "")
+                        {
+                            Console.WriteLine("\n\tВвод закончен");
+                        }
+                        else
+                        {
+                            Console.WriteLine(
+                                "\n\tК сожалению, вы ввели что-то не так. Ожидалось два натуральных числа, разделенные пробелом");
+                        }
                     }
                 }
             }
