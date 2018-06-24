@@ -65,7 +65,7 @@ namespace Задача_8
                 Graph[index] = new List<int>();
             }
 
-            Console.WriteLine("\n\tКаким образом заполнить массив?");
+            Console.WriteLine("\n\tКаким образом создать граф?");
             Console.WriteLine("\n\t1 - случайно");
             Console.WriteLine("\n\t2 - вручную");
             int answer = Functions.ReadAnswer(1, 2);
