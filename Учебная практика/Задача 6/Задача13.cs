@@ -26,7 +26,7 @@ namespace Задача_6
             for (int index = 0; index < 3; index++)
             {
                 Console.WriteLine("\n\tВвод a{0}", index + 1);
-                Functions.ReadInteger(out members[index]);
+                Functions.ReadInt(out members[index]);
                 if (members[index] % 3 == 0)
                 {
                     currentCountMultipleMembers++;

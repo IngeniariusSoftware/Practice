@@ -118,12 +118,12 @@ namespace Задача_9
             }
             else
             {
-                Functions.ReadInteger(out int number);
+                Functions.ReadInt(out int number);
                 Head = new Point(number);
                 Point shelfPoint = Head;
                 for (int index = 1; index < lengthList; index++)
                 {
-                    Functions.ReadInteger(out number);
+                    Functions.ReadInt(out number);
                     shelfPoint.Next = new Point(number);
                     shelfPoint = shelfPoint.Next;
                 }

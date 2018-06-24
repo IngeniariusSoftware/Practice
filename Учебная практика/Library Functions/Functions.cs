@@ -6,7 +6,7 @@ namespace Library_Functions
     {
         public static Random Rnd = new Random();
 
-        public static void ReadInteger(out int numberInteger)
+        public static void ReadInt(out int numberInteger)
         {
             bool rightInteger;
             do
