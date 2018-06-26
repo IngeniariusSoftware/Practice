@@ -6,9 +6,9 @@ namespace Задача_1
     {
         static int Nod(Int32 number1, Int32 number2)
         {
-            if (number1 == number2)
+            if (number1 == 0 || number2 == 0)
             {
-                return number1;
+                return number1 + number2;
             }
             else
             {
@@ -19,7 +19,7 @@ namespace Задача_1
                     number2 = shelf;
                 }
 
-                return Nod(number1, number2 - number1);
+                return Nod(number1, number2 % number1);
             }
         }
 

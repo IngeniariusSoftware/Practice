@@ -143,7 +143,7 @@ namespace Задача_8
                 }
             }
 
-            Console.WriteLine("\n\tМатрица инцидентности графа имеет вид:\n");
+            Console.WriteLine("\n\tМатрица смежности графа имеет вид:\n");
             for (int indexY = -1; indexY < lengthGraph; indexY++)
             {
                 if (indexY == -1)

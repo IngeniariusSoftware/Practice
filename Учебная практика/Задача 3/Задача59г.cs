@@ -13,12 +13,10 @@ namespace Задача_3
             Functions.ReadDouble(out double x);
             Console.WriteLine("\n\tВвод координаты y");
             Functions.ReadDouble(out double y);
-            if (x >= -1 &&
-                x <= 1 &&
-                y >= -1 &&
-                y <= 1 &&
-                x + y >= -1 &&
-                x + y <= 1)
+            if (y + x >= -1 &&
+                y + x <= 1 &&
+                y - x <= 1 &&
+                y - x >= -1)
             {
                 Console.WriteLine("\n\tТочка ({0} , {1}) принадлежит заданной области", x, y);
             }
