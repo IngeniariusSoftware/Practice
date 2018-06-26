@@ -1,10 +1,8 @@
 ﻿using System;
 using Library_Functions;
-using System.Text.RegularExpressions;
 
 namespace Задача_7
 {
-
     class Задача14
     {
         public static int VectorLength;
@@ -14,7 +12,7 @@ namespace Задача_7
         public static void CheackLinearFunction(string vector)
         {
             string lastVector = vector;
-            string valuesFunction = lastVector.Substring(0,1);
+            string valuesFunction = lastVector.Substring(0, 1);
             for (int index = 0; index < vector.Length - 1; index++)
             {
                 string nextVector = "";
@@ -29,6 +27,7 @@ namespace Задача_7
                         nextVector += 1;
                     }
                 }
+
                 valuesFunction += nextVector[0];
                 lastVector = nextVector;
             }
@@ -85,17 +84,19 @@ namespace Задача_7
 
         static void Main()
         {
-            Console.WriteLine("\n\tДоопределить заданную булеву функцию всеми возможными\n"
-                              + "\n\tспособами так, чтобы она была не линейной.\n"
-                              + "\n\tВыписать все вектора в лексикографическом порядке.");
+            Console.WriteLine(
+                "\n\tДоопределить заданную булеву функцию всеми возможными\n"
+                + "\n\tспособами так, чтобы она была не линейной.\n"
+                + "\n\tВыписать все вектора в лексикографическом порядке.");
             Console.WriteLine("\n\tВвод количества аргументов булевой функции");
             Functions.ReadNatural(out int countArguments);
             VectorLength = (int)Math.Pow(2, countArguments);
             bool rightVector = false;
             do
             {
-                Console.WriteLine("\n\tПожалуйста, введите булеву функцию, для обозначения пропусков используйте символ '-'\n"
-                                  + "\n\tНапример, функция для 2 аргументов может иметь такой вид: 0-01");
+                Console.WriteLine(
+                    "\n\tПожалуйста, введите булеву функцию, для обозначения пропусков используйте символ '-'\n"
+                    + "\n\tНапример, функция для 2 аргументов может иметь такой вид: 0-01");
                 string functionVector = CheckFunction(Console.ReadLine());
                 if (functionVector != null)
                 {
@@ -125,6 +126,7 @@ namespace Задача_7
                 }
             }
             while (!rightVector);
+
             Console.WriteLine("\n\tДля завершения работы нажмите на любую клавишу . . .");
             Console.ReadKey();
         }
