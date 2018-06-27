@@ -100,6 +100,7 @@ namespace Задача_7
                 string functionVector = CheckFunction(Console.ReadLine());
                 if (functionVector != null)
                 {
+                    Console.WriteLine("\n\tВаша функция имеет вид: {0}", functionVector);
                     if (functionVector.Contains("-"))
                     {
                         Console.WriteLine();

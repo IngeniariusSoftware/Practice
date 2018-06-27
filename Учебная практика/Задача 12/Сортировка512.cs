@@ -222,6 +222,7 @@ namespace Задача_12
             Show();
             Console.WriteLine("\n\tДля завершения работы нажмите на любую клавишу . . .");
             Console.ReadKey();
+            
         }
     }
 }
