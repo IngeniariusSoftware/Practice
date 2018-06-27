@@ -40,6 +40,7 @@ namespace Задача_4
             }
             while (!rightX);
 
+            Console.WriteLine("\n\tВвод основания системы счисления");
             int radix;
             bool rightRadix;
             do
