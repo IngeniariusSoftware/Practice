@@ -16,6 +16,7 @@ namespace Задача_10
             double[] sequence = new double[sequenceLength];
             for (int index = 0; index < sequenceLength; index++)
             {
+                Console.WriteLine("\n\tВвод {0} члена последовательности", index + 1);
                 Functions.ReadDouble(out sequence[index]);
             }
 

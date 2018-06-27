@@ -9,7 +9,7 @@ namespace Задача_12
 
         public static int CountSwap = 0;
 
-        public static int[] Mas = new int[100];
+        public static int[] Mas = new int[1000];
 
         public static int CurrentPostion = 0;
 
