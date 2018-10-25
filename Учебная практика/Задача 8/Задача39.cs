@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Library_Functions;
 using System.Text.RegularExpressions;
@@ -191,9 +191,6 @@ namespace Задача_8
                     "\n\tК сожалению, в графе не было найдено ни одного простого цикла длины {0}",
                     LengthPath);
             }
-
-            Console.WriteLine("\n\tДля завершения работы нажмите на любую клавишу . . .");
-            Console.ReadKey();
         }
     }
 }
